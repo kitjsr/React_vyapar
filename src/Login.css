@@ -1,6 +1,5 @@
-.but{
-    padding-left:180px;
-    padding-right:180px;
+.but1{
+    margin:0;
     text-align: center;
     font-weight: bold;
 }
@@ -10,9 +9,7 @@ p{
 h2{
     text-align: center;
 }
-.but1{
-    padding-left:137px;
-    padding-right:137px;
+.but2{
     text-align: center;
     font-weight: bold;
 }

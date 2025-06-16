@@ -31,7 +31,7 @@ export const Login = () => {
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Remember me" />
       </Form.Group>
-      <Button variant="primary" type="submit" className='but'>
+      <Button variant="primary" type="submit" className='but1'>
         LOGIN
       </Button>
     </Form>
@@ -45,7 +45,7 @@ export const Login = () => {
         <Col md={4}></Col>
             <Col md={4}>
         <p>Forgot your password</p>
-      <Button variant="primary" type="submit" className='but1'>
+      <Button variant="primary" type="submit" className='but2'>
         LOGIN WITH OTP
       </Button>
       
