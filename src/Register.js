@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './Register.css';
 import { Link } from 'react-router';
-import { Formik } from 'formik';
+import { Formik , Field} from 'formik';
 import * as Yup from 'yup';
 
 
@@ -58,8 +58,7 @@ export const Register = () => {
             <h2>Create Account</h2>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>First Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter first name" />
-              
+              <Form.Control type="text" placeholder="Enter first name" name='firstName' />
            {errors.firstName && touched.firstName ? (
              <div>{errors.firstName}</div>
            ) : null}
@@ -67,7 +66,7 @@ export const Register = () => {
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Last Name</Form.Label>
               <Form.Control type="text" placeholder="Enter last name" />
-              
+            
            {errors.lastName && touched.lastName ? (
              <div>{errors.lastName}</div>
            ) : null}
