@@ -7,6 +7,7 @@ import Register from './Register';
 import Login from './Login';
 import Invoice from './Invoice';
 import Additem from './Additem';
+import { Model } from './Model';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <li><Link to="/register">Register</Link></li>
         <li><Link to="/invoice">Invoice</Link></li>
         <li><Link to="/additem">Item</Link></li>
+        <li><Link to="/model">Model</Link></li>
       </ul>
       <Routes>
         <Route path=" " element={<Home/>}/>
@@ -23,6 +25,7 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/invoice" element={<Invoice/>}/>
         <Route path="/additem" element={<Additem/>}/>
+        <Route path="/model" element={<Model/>}/>
         <Route path="/*" element={<Home/>}/>
       </Routes>
     </div>

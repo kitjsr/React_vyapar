@@ -1,10 +1,64 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap'
 import './Additem.css';
 import CloseButton from 'react-bootstrap/CloseButton';
 import { Link } from 'react-router';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+
+
+function MydModalWithGrid(props) {
+  return (
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Select unit
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body className="grid-example">
+        <Container>
+          <Row>
+            <Col md={6}>
+                <Form>
+                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Label className='base'>Base Unit</Form.Label>
+                        <Form.Select aria-label="Default select example">
+                            <option>Base unit</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </Form.Select>
+                    </Form.Group>
+                </Form>
+            </Col>
+            <Col md={6}>                
+                <Form>
+                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Label className='secondary'>Secondary Unit</Form.Label>
+                    <Form.Select aria-label="Default select example">
+                            <option>Secondary unit</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                    </Form.Select>
+                    </Form.Group>
+                </Form>
+            </Col>
+          </Row>
+
+          
+        </Container>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
 
 export const Additem = () => {
+    const [modalShow, setModalShow] = useState(false);
+
   return (
     <Container className='head'>
         <Row className='head1'>
@@ -28,7 +82,13 @@ export const Additem = () => {
                     </Form.Group>
                 </Col>
                 <Col md={2} className='from1'>
-                    <a href=''>SELECT UNIT</a>
+                    <>
+      <Button variant="primary" onClick={() => setModalShow(true)}>
+        Select unit
+      </Button>
+
+      <MydModalWithGrid show={modalShow} onHide={() => setModalShow(false)} />
+    </>
                 </Col>
                 <Col md={4} className='from2'>
                     <p><Link to="/additem">Add item image</Link></p>
