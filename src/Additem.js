@@ -1,10 +1,89 @@
 import React from 'react'
-import { Col, Container, Form, Row } from 'react-bootstrap'
+import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import './Additem.css';
 import CloseButton from 'react-bootstrap/CloseButton';
 import { Link } from 'react-router';
+import Modal from 'react-bootstrap/Modal';
+
+function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="md"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton className='title'>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Select Unit
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <Container>
+          <Row>
+            <Col md={6}>
+                <Form.Label className='base'>Base unit</Form.Label>
+                <Form.Select aria-label="Default select example">
+                    <option>Base unit</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </Form.Select>
+            </Col>
+            <Col md={6}>
+                <Form.Label className='secondary'>Secondary unit</Form.Label>
+                <Form.Select aria-label="Default select example">
+                    <option>Secondary unit</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </Form.Select>
+            </Col>
+          </Row>
+        </Container>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
+function MydModalWithGrid(props) {
+  return (
+    <Modal
+      {...props}
+      size="md"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton className='title'>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Add Category
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <Container>
+          <Row>
+            <Col>
+                <Form>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Add new category</Form.Label>
+                        <Form.Control type="number" placeholder="Enter invoice number" />
+                    </Form.Group>
+                </Form>
+            </Col>
+          </Row>
+        </Container>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
 
 export const Additem = () => {
+    const [modalShow, setModalShow] = React.useState(false);
   return (
     <Container className='head'>
         <Row className='head1'>
@@ -28,10 +107,21 @@ export const Additem = () => {
                     </Form.Group>
                 </Col>
                 <Col md={2} className='from1'>
-                    <a href=''>SELECT UNIT</a>
+                    <>
+                        <Button onClick={() => setModalShow(true)}>
+                            SELECT UNIT
+                        </Button>
+                        <MyVerticallyCenteredModal
+                        show={modalShow}
+                        onHide={() => setModalShow(false)}
+                        />
+                    </>
                 </Col>
                 <Col md={4} className='from2'>
                     <p><Link to="/additem">Add item image</Link></p>
+                    {/* <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Control type="file" placeholder="Add image" required className='from' />
+                    </Form.Group> */}
                 </Col>
             </Row>
             <Row className='head5'>
@@ -39,9 +129,9 @@ export const Additem = () => {
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Select aria-label="Default select example" className='from'>
                             <option>Category</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="1"><Button onClick={() => setModalShow(true)}>Add new category</Button>
+                            <MydModalWithGrid show={modalShow} onHide={() => setModalShow(false)} />
+                            </option>
                         </Form.Select>
                     </Form.Group>
                     

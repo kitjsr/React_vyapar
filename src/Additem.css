@@ -26,19 +26,15 @@
 .from1{
     margin-top:10px;
 }
-.from1 a:link,.from1 a:visited{
-    padding:10px 15px;
-    border-radius:5px;
-    text-decoration: none;
+.from1 button{
     background:#117c9b;
     color: #fff;
 }
 .from{
-    padding-top:10px;
-    padding-bottom:10px;
+    padding-top:5px;
+    padding-bottom:5px;
 }
-
-.from1 a:hover{
+.from1 :hover{
     background:#d6dfe2;
     font-weight:500;
     color: #117c9b;
@@ -79,4 +75,15 @@
     text-align: left;
     padding-top:30px;
     font-size:20px;
+}
+.title{
+    background-color: #bcdee8;
+}
+.base{
+    color:#2b5865;
+    font-weight:500;
+}
+.secondary{
+    color:#2b5865;
+    font-weight:500;
 }
