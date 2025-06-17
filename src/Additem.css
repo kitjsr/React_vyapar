@@ -67,10 +67,6 @@
 .head3 :hover{
     color: red;
 }
-.price1{
-    border: solid gray 1px;
-    background-color: #e5ecee ;
-}
 .price2 p{
     text-align: left;
     padding-top:30px;

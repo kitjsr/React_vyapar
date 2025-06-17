@@ -129,7 +129,7 @@ export const Additem = () => {
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Select aria-label="Default select example" className='from'>
                             <option>Category</option>
-                            <option value="1"><Button onClick={() => setModalShow(true)}>Add new category</Button>
+                            <option><Button onClick={() => setModalShow(true)}>Add new category</Button>
                             <MydModalWithGrid show={modalShow} onHide={() => setModalShow(false)} />
                             </option>
                         </Form.Select>
@@ -157,6 +157,12 @@ export const Additem = () => {
                     <Col>
                         <p>Sale Price</p>
                     </Col>
+                </Row>
+                <Row>
+                    <Col md={3}></Col>
+                    <Col md={3}></Col>
+                    <Col md={3}></Col>
+                    <Col md={3}></Col>
                 </Row>
             </Col>
         </Row>
