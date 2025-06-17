@@ -4,6 +4,9 @@ import './Additem.css';
 import CloseButton from 'react-bootstrap/CloseButton';
 import { Link } from 'react-router';
 import Modal from 'react-bootstrap/Modal';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Popover from 'react-bootstrap/Popover';
+
 
 function MyVerticallyCenteredModal(props) {
   return (
