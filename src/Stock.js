@@ -84,7 +84,7 @@ function MydModalWithGrid(props) {
   );
 }
 
-export const Additem = () => {
+export const Stock = () => {
     const [modalShow, setModalShow] = React.useState(false);
   return (
     <Container className='head'>
@@ -255,7 +255,7 @@ export const Additem = () => {
   )
 }
 
-export default Additem
+export default Stock
 
 
 

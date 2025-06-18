@@ -23,9 +23,6 @@
     border-bottom:solid 1px grey;
     padding-bottom:30px;
 }
-.from1{
-    margin-top:10px;
-}
 .from1 button{
     background:#117c9b;
     color: #fff;
@@ -42,7 +39,6 @@
 .from2 p{
     font-size:20px;
     text-align: left;
-    padding-top:15px;
 }
 .price p{
     text-align: left;
@@ -67,11 +63,6 @@
 .head3 :hover{
     color: red;
 }
-.price2 p{
-    text-align: left;
-    padding-top:30px;
-    font-size:20px;
-}
 .title{
     background-color: #bcdee8;
 }
@@ -82,4 +73,10 @@
 .secondary{
     color:#2b5865;
     font-weight:500;
+}
+.sale{
+    padding-bottom:20px;
+}
+.sale1{
+    padding-top:10px;
 }
