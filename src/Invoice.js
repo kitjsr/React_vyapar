@@ -17,7 +17,6 @@ export const Invoice = () => {
         setBalance(invoiceAmount-received)
     }
   return (
-        
     <Container>
         <Row className='invoice'>
             <Col md={6} className='heading'>
