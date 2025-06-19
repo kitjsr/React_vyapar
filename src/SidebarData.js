@@ -10,7 +10,7 @@ export const SidebarData = [
     {
         title:"Item",
         icon:<HomeIcon/>,
-        link:"/additem",
+        link:"/item",
     },
     {
         title:"Invoice",

@@ -89,11 +89,8 @@ export const Additem = () => {
   return (
     <Container className='head'>
         <Row className='head1'>
-            <Col md={6}>
+            <Col>
                 <h3>Add Item</h3>
-            </Col>
-            <Col md={6}>
-                <p><CloseButton /></p>
             </Col>
         </Row>
         <Form>

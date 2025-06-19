@@ -11,6 +11,7 @@ import Stock from './Stock';
 // import Sidebar from './Sidebar';
 import Dashboard from './Dashboard';
 import Sidebar from './Sidebar';
+import Item from './Item';
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/invoice" element={<Invoice/>}/>
-        <Route path="/additem" element={<Additem/>}/>
+        <Route path="/item" element={<Item/>}/>
         <Route path="/stock" element={<Stock/>}/>
         <Route path="/*" element={<Home/>}/>
       </Routes>
