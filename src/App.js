@@ -8,6 +8,8 @@ import Login from './Login';
 import Invoice from './Invoice';
 import Additem from './Additem';
 import Stock from './Stock';
+// import Sidebar from './Sidebar';
+import Dashboard from './Dashboard';
 import Sidebar from './Sidebar';
 
 function App() {
