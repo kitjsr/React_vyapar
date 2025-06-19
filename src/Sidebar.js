@@ -9,7 +9,7 @@ const Sidebar=({children})=>{
         const[isOpen,setIsOpen]=useState(false);
         const toggle=()=>setIsOpen(!isOpen);
   return (
-    <div className='Sidebar'>
+    <div>
       <div style={{width:isOpen ? "250px":"50px"}} className="sidebar">
               <div className='top-section'>
                   <h1 style={{display:isOpen ? "block":"none"}} className='logo'>LOGO</h1>
