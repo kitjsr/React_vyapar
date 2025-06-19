@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
-import './Additem.css';
+import './Stock.css';
 import CloseButton from 'react-bootstrap/CloseButton';
 import { Link } from 'react-router';
 import Modal from 'react-bootstrap/Modal';
@@ -147,108 +147,51 @@ export const Stock = () => {
             </Row>
         <Row className='head3'>
             <Col md={1} className='price'>
-                <p><Link to="">Pricing</Link></p>
+                <p><Link to="/additem">Pricing</Link></p>
             </Col>
             <Col md={1} className='stock'>
                 <p><Link to="">Stock</Link></p>
             </Col>
             <Col md={10}></Col>
         </Row>
-        <Row className='sale'>
-            <Col md={6} className='sale1'>
-              <Accordion>
-                  <Accordion.Item eventKey="0">
-                    <Accordion.Header>Sale price</Accordion.Header>
-                      <Accordion.Body>
-                          <Row>
-                            <Col md={6}>
-                              <InputGroup className="mb-3">
-                              <Form.Control aria-label="Text input with dropdown button" placeholder='sale price'/>
-                              <Form.Select aria-label="Default select example">
-                                <option value="1">With tax</option>
-                                <option value="2">Without tax</option>
-                              </Form.Select>
-                              </InputGroup>
-                            </Col>
-                            <Col md={6}>
-                              <InputGroup className="mb-3">
-                              <Form.Control aria-label="Text input with dropdown button" placeholder='Disc on sale price'/>
-                              <Form.Select aria-label="Default select example">
-                                <option value="1">Percentage</option>
-                                <option value="2">Amount</option>
-                              </Form.Select>
-                              </InputGroup>
-                                 
-                            </Col>
-                          </Row>
-                      </Accordion.Body>
-                  </Accordion.Item>
-              </Accordion>
-            </Col>
-            <Col md={6} className='sale1'>
-              <Accordion>
-                        <Accordion.Item eventKey="0">
-                        <Accordion.Header>Wholesale price</Accordion.Header>
-                            <Accordion.Body>
-                              <Row>
-                                <Col md={6}>
-                      <InputGroup className="mb-3">
-                        <Form.Control aria-label="Text input with dropdown button" placeholder='Wholesale price'/>
-                        <Form.Select aria-label="Default select example">
-                          <option value="1">With tax</option>
-                          <option value="2">Without tax</option>
-                        </Form.Select>
-                      </InputGroup>
-                                </Col>
-                                <Col md={6}>
-                                  <Form.Control aria-label="Text input with dropdown button" placeholder='Minimum wholesale quantity'/>
-                                </Col>
-                              </Row>
-                            </Accordion.Body>
-                        </Accordion.Item>
-                      </Accordion>
-            </Col>
+        <Row>
+          <Col md={3}>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Control type="number" placeholder="Opening quantity" required className='from' />
+            </Form.Group>
+          </Col>
+          <Col md={3}>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Control type="number" placeholder="At price" required className='from' />
+            </Form.Group>
+          </Col>
+          <Col md={3}>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Control type="date" placeholder="As of date" required className='from' />
+            </Form.Group>
+          </Col>
         </Row>
-        <Row className='sale'>
-            <Col md={6} className='sale1'>
-              <Accordion>
-                  <Accordion.Item eventKey="0">
-                    <Accordion.Header>Purchase price</Accordion.Header>
-                      <Accordion.Body>
-                          <Row>
-                            <Col md={6}>
-                              <InputGroup className="mb-3">
-                              <Form.Control aria-label="Text input with dropdown button" placeholder='Purchase price'/>
-                              <Form.Select aria-label="Default select example">
-                                <option value="1">With tax</option>
-                                <option value="2">Without tax</option>
-                              </Form.Select>
-                              </InputGroup>
-                            </Col>
-                          </Row>
-                      </Accordion.Body>
-                  </Accordion.Item>
-              </Accordion>
-            </Col>
-            <Col md={6} className='sale1'>
-              <Accordion>
-                        <Accordion.Item eventKey="0">
-                        <Accordion.Header>Taxes</Accordion.Header>
-                            <Accordion.Body>
-                              <Row>
-                                <Col md={6}>
-                                  <Form.Select aria-label="Default select example">
-                                    <option>Tax rate</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                  </Form.Select>
-                                </Col>
-                              </Row>
-                            </Accordion.Body>
-                        </Accordion.Item>
-                      </Accordion>
-            </Col>
+        <Row>
+          <Col md={3}>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Control type="number" placeholder="Min stock to maintain" required className='from' />
+            </Form.Group>     
+          </Col>
+          <Col md={3}>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Control type="text" placeholder="Location" required className='from' />
+            </Form.Group>
+          </Col>
+        </Row>
+        <Row>
+          <Col className='save'>
+            <Button variant="outline-secondary" size="lg" disabled>
+              Save & new
+            </Button>
+            <Button href="#" variant="secondary" size="lg" disabled className='link'>
+              Save
+            </Button>
+          </Col>
         </Row>
         </Form>
     </Container>

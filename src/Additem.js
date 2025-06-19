@@ -150,7 +150,7 @@ export const Additem = () => {
                 <p><Link to="">Pricing</Link></p>
             </Col>
             <Col md={1} className='stock'>
-                <p><Link to="">Stock</Link></p>
+                <p><Link to="/stock">Stock</Link></p>
             </Col>
             <Col md={10}></Col>
         </Row>
@@ -249,6 +249,16 @@ export const Additem = () => {
                         </Accordion.Item>
                       </Accordion>
             </Col>
+        </Row>
+        <Row>
+          <Col className='save'>
+            <Button variant="outline-secondary" size="lg" disabled>
+              Save & new
+            </Button>
+            <Button href="#" variant="secondary" size="lg" disabled className='link'>
+              Save
+            </Button>
+          </Col>
         </Row>
         </Form>
     </Container>
