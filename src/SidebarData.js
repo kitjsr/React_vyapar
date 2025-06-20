@@ -1,5 +1,10 @@
 import React from 'react'
 import HomeIcon from '@mui/icons-material/Home';
+import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
+import DescriptionOutlined from '@mui/icons-material/DescriptionOutlined';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
+import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
 
 export const SidebarData = [
     {
@@ -9,23 +14,28 @@ export const SidebarData = [
     },
     {
         title:"Item",
-        icon:<HomeIcon/>,
+        icon:<LocalMallOutlinedIcon/>,
         link:"/additem",
     },
     {
         title:"Invoice",
-        icon:<HomeIcon/>,
+        icon:<DescriptionOutlined/>,
         link:"/invoice",
     },
     {
         title:"Register",
-        icon:<HomeIcon/>,
+        icon:<PersonOutlineOutlinedIcon/>,
         link:"/register",
     },
     {
-        title:"Home",
-        icon:<HomeIcon/>,
-        link:"/home",
+        title:"Party",
+        icon:<GroupOutlinedIcon/>,
+        link:"/party",
+    },
+    {
+        title:"Profile",
+        icon:<AddCircleOutlinedIcon/>,
+        link:"/profile",
     },
 ]
 

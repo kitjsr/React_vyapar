@@ -11,14 +11,17 @@ import Alert from "react-bootstrap/Alert";
 import { Button } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import Sidebar from "./Sidebar";
-
+import DescriptionOutlined from '@mui/icons-material/DescriptionOutlined';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import ViewInArOutlinedIcon from '@mui/icons-material/ViewInArOutlined';
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 export const Invoice = () => {
   const [balance, invoiceAmount, received, setBalance] = useState(0.0);
   const balance1 = () => {
     setBalance(invoiceAmount - received);
   };
   return (
-    <Container>
+    <Container className="top">
       <Row>
         {/* <Col md={2}>
           <Sidebar />
@@ -34,8 +37,7 @@ export const Invoice = () => {
                 <Row className="invoice1">
                   <Col md={6}>
                     <p>
-                      <MDBIcon fas icon="file-invoice" />
-                      Invoice Details :
+                      <DescriptionOutlined className="desc"/> Invoice Details :
                     </p>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                       <Form.Label>Invoice Number</Form.Label>
@@ -50,7 +52,7 @@ export const Invoice = () => {
                     </Form.Group>
                   </Col>
                   <Col md={6}>
-                    <p>Bill To :</p>
+                    <p><PersonOutlineOutlinedIcon className="person"/>Bill To :</p>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                       <Form.Label>Customer Name</Form.Label>
                       <Form.Control
@@ -62,12 +64,12 @@ export const Invoice = () => {
                 </Row>
                 <Row className="invoice2">
                   <Col>
-                    <p>Add Sample item</p>
+                    <p><ViewInArOutlinedIcon/>Add Sample item</p>
                   </Col>
                 </Row>
                 <Row className="invoice1">
                   <Col>
-                    <p>Invoice calculation : </p>
+                    <p><CurrencyRupeeIcon className="person"/>Invoice calculation : </p>
                   </Col>
                 </Row>
                 <Row>

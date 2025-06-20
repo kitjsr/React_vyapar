@@ -17,6 +17,8 @@ import { Route, Routes } from 'react-router';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Model } from './Model';
+import Party from "./Party";
+import Profile from "./Profile";
 
 function App() {
   return (
@@ -44,6 +46,8 @@ function App() {
               <Route path="/invoice" element={<Invoice />} />
               <Route path="/additem" element={<Additem />} />
               <Route path="/stock" element={<Stock />} />
+              <Route path="/party" element={<Party />} />
+              <Route path="/profile" element={<Profile/>} />
               <Route path="/*" element={<Home />} />
             </Routes>
           </Col>
