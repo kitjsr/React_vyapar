@@ -45,8 +45,8 @@ export const Register = () => {
         </Col> */}
         <Col md={12}>
           <Row>
-            <Col md={4}></Col>
-            <Col md={4} className="form1">
+            {/* <Col md={4}></Col> */}
+            <Col md={12} className="form1">
               <Formik
                 initialValues={{
                   firstName: "",
@@ -123,7 +123,7 @@ export const Register = () => {
               </Formik>
               <br />
             </Col>
-            <Col md={4}></Col>
+            {/* <Col md={4}></Col> */}
             <p>
               Already a member ? <Link to="/login">Login here</Link>
             </p>
