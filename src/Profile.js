@@ -7,7 +7,9 @@ import Button from 'react-bootstrap/Button';
 export const Profile = () => {
   return (
     <Container className='heading'>
-        <Row>
+        <Row style={{padding:'0 10px'}}>
+            <Col>
+                <Row>
             <Col>
                 <h3>Create Profile</h3>
             </Col>
@@ -116,6 +118,8 @@ export const Profile = () => {
                 </Col>
             </Row>
         </Form>
+            </Col>
+        </Row>
     </Container>
   )
 }

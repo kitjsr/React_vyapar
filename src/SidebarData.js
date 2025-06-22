@@ -37,6 +37,11 @@ export const SidebarData = [
         icon:<AddCircleOutlinedIcon/>,
         link:"/profile",
     },
+    {
+        title:"Service",
+        icon:<AddCircleOutlinedIcon/>,
+        link:"/service",
+    },
 ]
 
 export default SidebarData

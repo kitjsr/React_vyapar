@@ -85,7 +85,7 @@ function MydModalWithGrid(props) {
   );
 }
 
-export const Additem = () => {
+export const Service = () => {
   const [modalShow, setModalShow] = React.useState(false);
   const [isOn, setIsOn] = useState(false);
 
@@ -105,9 +105,8 @@ export const Additem = () => {
   <input type="checkbox" onClick={handleToggle} />
   
   <span class="slider round">
-  </span>
-  
     {isOn ? 'ON' : 'OFF'}
+  </span>
 </label>
         </Col>
         <Col md={1} style={{fontSize:'20px'}}>
@@ -118,12 +117,12 @@ export const Additem = () => {
         <Row className='head2'>
           <Col md={3}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Control type="text" placeholder="Item name" required className='from' />
+              <Form.Control type="text" placeholder="Service name" required className='from' />
             </Form.Group>
           </Col>
           <Col md={3}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Control type="number" placeholder="Item HSN" required className='from' />
+              <Form.Control type="number" placeholder="Service HSN" required className='from' />
             </Form.Group>
           </Col>
           <Col md={2} className='from1'>
@@ -159,16 +158,13 @@ export const Additem = () => {
           </Col>
           <Col md={3}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Control type="number" placeholder="Item Code" required className='from' />
+              <Form.Control type="number" placeholder="Service Code" required className='from' />
             </Form.Group>
           </Col>
         </Row>
         <Row className='head3'>
           <Col md={1} className='price'>
             <p><Link to="">Pricing</Link></p>
-          </Col>
-          <Col md={1} className='stock'>
-            <p><Link to="/stock">Stock</Link></p>
           </Col>
           <Col md={10}></Col>
         </Row>
@@ -231,26 +227,6 @@ export const Additem = () => {
           <Col md={6} className='sale1'>
             <Accordion>
               <Accordion.Item eventKey="0">
-                <Accordion.Header>Purchase price</Accordion.Header>
-                <Accordion.Body>
-                  <Row>
-                    <Col md={6}>
-                      <InputGroup className="mb-3">
-                        <Form.Control aria-label="Text input with dropdown button" placeholder='Purchase price' />
-                        <Form.Select aria-label="Default select example">
-                          <option value="1">With tax</option>
-                          <option value="2">Without tax</option>
-                        </Form.Select>
-                      </InputGroup>
-                    </Col>
-                  </Row>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-          </Col>
-          <Col md={6} className='sale1'>
-            <Accordion>
-              <Accordion.Item eventKey="0">
                 <Accordion.Header>Taxes</Accordion.Header>
                 <Accordion.Body>
                   <Row>
@@ -283,7 +259,7 @@ export const Additem = () => {
   )
 }
 
-export default Additem
+export default Service
 
 
 

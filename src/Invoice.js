@@ -22,11 +22,6 @@ export const Invoice = () => {
   };
   return (
     <Container className="top">
-      <Row>
-        {/* <Col md={2}>
-          <Sidebar />
-        </Col> */}
-        <Col md={12}>
           <Row className="invoice">
             <Col md={6} className="heading">
               <h3>Enter details to make your first Sale 🚀</h3>
@@ -116,8 +111,6 @@ export const Invoice = () => {
               />
             </Col>
           </Row>
-        </Col>
-      </Row>
     </Container>
   );
 };

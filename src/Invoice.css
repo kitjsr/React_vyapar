@@ -8,6 +8,7 @@
 }
 .invoice{
     background-color: #c4e4ed;
+    padding:0 10px;
 }
 .invoice h3{
     font-size:20px;

@@ -19,6 +19,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Model } from './Model';
 import Party from "./Party";
 import Profile from "./Profile";
+import Service from "./Service";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
               <Route path="/stock" element={<Stock />} />
               <Route path="/party" element={<Party />} />
               <Route path="/profile" element={<Profile/>} />
+              <Route path="/service" element={<Service/>} />
               <Route path="/*" element={<Home />} />
             </Routes>
           </Col>
