@@ -107,7 +107,7 @@ export const Additem = () => {
   <span class="slider round">
   </span>
   
-    {isOn ? 'ON' : 'OFF'}
+    {isOn ? 'ON' : 'OFF'}.
 </label>
         </Col>
         <Col md={1} style={{fontSize:'20px'}}>
