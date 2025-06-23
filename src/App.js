@@ -45,7 +45,7 @@ function App() {
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
               <Route path="/invoice" element={<Invoice />} />
-              <Route path="/additem" element={<Additem />} />
+              <Route path="/item" element={<Item />} />
               <Route path="/stock" element={<Stock />} />
               <Route path="/party" element={<Party />} />
               <Route path="/profile" element={<Profile/>} />

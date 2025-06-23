@@ -15,7 +15,7 @@ export const SidebarData = [
     {
         title:"Item",
         icon:<LocalMallOutlinedIcon/>,
-        link:"/additem",
+        link:"/item",
     },
     {
         title:"Invoice",
