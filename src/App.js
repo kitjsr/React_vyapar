@@ -19,6 +19,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Model } from './Model';
 import Party from "./Party";
 import Profile from "./Profile";
+import ViewProfile from "./ViewProfile";
 import Service from "./Service";
 
 function App() {
@@ -46,10 +47,12 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/invoice" element={<Invoice />} />
               <Route path="/item" element={<Item />} />
+              <Route path="/additem" element={<Additem />} />
               <Route path="/stock" element={<Stock />} />
               <Route path="/party" element={<Party />} />
               <Route path="/profile" element={<Profile/>} />
               <Route path="/service" element={<Service/>} />
+              <Route path="/viewprofile" element={<ViewProfile/>} />
               <Route path="/*" element={<Home />} />
             </Routes>
           </Col>

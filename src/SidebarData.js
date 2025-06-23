@@ -18,6 +18,11 @@ export const SidebarData = [
         link:"/item",
     },
     {
+        title:"Additem",
+        icon:<LocalMallOutlinedIcon/>,
+        link:"/additem",
+    },
+    {
         title:"Invoice",
         icon:<DescriptionOutlined/>,
         link:"/invoice",
